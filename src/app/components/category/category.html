@@ -1,0 +1,6 @@
+<div class="category bg-red-500">
+    <h1 class="text-4xl p-8 font-semibold ">Categories</h1>
+    <div *ngFor="let category of categories" class="categories items-center space-x-2">
+        <zard-checkbox [(ngModel)]="category.checked">{{ category.name }}</zard-checkbox>
+    </div>
+</div>

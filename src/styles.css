@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";  
+@theme {
+    /* Your existing theme configuration */
+    --color-background: oklch(100% 0 0);
+    --color-foreground: oklch(8.5% 0 0);
+    /* ... other colors */
+  }
+   
+  /* Dark mode custom variant */
+  @custom-variant dark (&:is(.dark *));

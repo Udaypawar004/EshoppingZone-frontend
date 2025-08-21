@@ -1,0 +1,59 @@
+<nav class="flex items-center justify-between w-full h-[9vh] px-8 bg-white dark:bg-gray-900 shadow">
+  <!-- Logo / Brand -->
+  <div class="flex items-center space-x-2">
+    <a routerLink="/" class="flex items-center space-x-2">
+      <!-- <img src="/assets/logo.png" alt="Logo" class="h-8 w-8" /> -->
+      <span class="text-xl font-bold text-gray-800 dark:text-white">EShopping</span>
+    </a>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="hidden md:flex items-center space-x-6">
+    <a routerLink="/" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition">Home</a>
+    <a routerLink="/products" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition">Products</a>
+  </div>
+
+  <!-- Right Side: Theme Toggle & Cart/User -->
+  <div class="flex items-center space-x-4">
+    <!-- Dark Mode Toggle -->
+    <app-dark-mode-toggle></app-dark-mode-toggle>
+
+    <!-- Cart Icon -->
+    <a routerLink="/cart" class="relative group hover:scale-105">
+      <div class="pt-[5px]">
+        <svg class="w-5 h-5 text-gray-700 dark:text-gray-200  transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+        </svg>
+        <!-- Example cart count badge -->
+        <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full px-1.5 py-0.5">2</span>
+      </div>
+      <div class="text-gray-700 text-xs font-bold pt-1 dark:text-gray-300 ">
+        Cart
+      </div>
+    </a>
+
+    <!-- User Icon -->
+    <app-dropdown></app-dropdown>
+  </div>
+
+  <!-- Mobile Menu Button -->
+  <div class="md:hidden flex items-center">
+    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-200 focus:outline-none">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu (hidden by default, show with JS if needed) -->
+<div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white dark:bg-gray-900">
+  <a routerLink="/" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition">Home</a>
+  <a routerLink="/products" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition">Shop</a>
+  <a routerLink="/about" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition">About</a>
+  <a routerLink="/contact" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition">Contact</a>
+  <a routerLink="/cart" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition">Cart</a>
+  <a routerLink="/profile" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition">Account</a>
+</div>
