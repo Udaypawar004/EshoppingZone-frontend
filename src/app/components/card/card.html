@@ -1,1 +1,13 @@
-<p>card works!</p>
+<div class="max-w-xs bg-white rounded-lg shadow-lg hover:scale-110 overflow-hidden hover:shadow-2xl transition-all duration-300 ease-in-out">
+    <div class="h-48 bg-gray-100 flex items-center justify-center">
+        <img class="object-contain h-full w-full" [src]="image" alt="{{ title }}" />
+    </div>
+    <div class="p-4 flex flex-col gap-2 ">
+        <h2 class="text-lg font-semibold text-gray-800 truncate">{{ title }}</h2>
+        <p class="text-gray-600 text-sm line-clamp-2">{{ description }}</p>
+        <p class="text-indigo-600 font-bold text-base mt-2">Price: {{ price }}</p>
+        <button (click)="addToCart(id)" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors w-full font-medium">
+            Add to Cart
+        </button>
+    </div>
+</div>

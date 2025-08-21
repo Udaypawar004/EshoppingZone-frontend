@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ZardCheckboxComponent } from '../checkbox/checkbox.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-category',
-  imports: [ZardCheckboxComponent, FormsModule, CommonModule],
+  imports: [ CommonModule, FormsModule],
   templateUrl: './category.html',
   styleUrl: './category.css'
 })

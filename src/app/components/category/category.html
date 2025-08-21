@@ -1,6 +1,13 @@
-<div class="category bg-red-500">
+<div class="category border-[1px] rounded-2xl border-gray-500 bg-transparent pb-10 mt-8">
     <h1 class="text-4xl p-8 font-semibold ">Categories</h1>
-    <div *ngFor="let category of categories" class="categories items-center space-x-2">
-        <zard-checkbox [(ngModel)]="category.checked">{{ category.name }}</zard-checkbox>
+    <div *ngFor="let category of categories" class="categories items-center space-x-2 pl-10 pb-2">
+        <label class="flex items-center space-x-2 cursor-pointer">
+            <input
+                type="checkbox"
+                [(ngModel)]="category.checked"
+                class="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500 border-gray-300"
+            />
+            <span class="text-lg text-gray-200">{{category.name}}</span>
+        </label>
     </div>
 </div>

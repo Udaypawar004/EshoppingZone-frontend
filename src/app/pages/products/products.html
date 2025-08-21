@@ -1,8 +1,15 @@
-<div class="w-full h-[91vh] flex">
-    <div class="category-container flex flex-col justify-center items-center w-[25%] h-full">
-        <div class="w-[80%] h-[80%] bg-red-500 rounded-2xl"><app-category></app-category></div>
+<div class=" bg-white dark:bg-gray-900 dark:text-white flex">
+    <div class="category-container flex-col justify-center items-center w-[25%] h-full hidden lg:flex">
+        <div class="w-[80%] h-[80%] rounded-2xl">
+            <app-category></app-category>
+        </div>
     </div>
-    <div class="cards-container w-[75%] h-full bg-yellow-400">
-        <app-card></app-card>
+    <div class="cards-container grid gap-8 p-8 w-[75%] h-full xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <app-card *ngFor="let product of products"
+                  [id]="product.id"
+                  [image]="product.image"
+                  [title]="product.title"
+                  [description]="product.description"
+                  [price]="product.price"></app-card>
     </div>
 </div>
