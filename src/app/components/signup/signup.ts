@@ -16,21 +16,18 @@ export class SignupComponent {
   isAdmin = false;
 
   onClientSelected() {
-    console.log("Client selected");
     this.isClient = true;
     this.isMerchant = false;
     this.isAdmin = false;
   }
 
   onMerchantSelected() {
-    console.log("Merchant selected");
     this.isClient = false;
     this.isMerchant = true;
     this.isAdmin = false;
   }
 
-  onAdminSelected() {
-    console.log("Admin selected");
+  onAdminSelected() {   
     this.isClient = false;
     this.isMerchant = false;
     this.isAdmin = true;
