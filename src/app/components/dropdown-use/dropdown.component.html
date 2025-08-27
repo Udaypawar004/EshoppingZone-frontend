@@ -1,5 +1,5 @@
-<a z-button zVariant="outline" z-dropdown [zDropdownMenu]="menu" zType="outline" class="group"
-    class="flex flex-col justify-center items-center hover:scale-105">
+<a z-button zVariant="outline" z-dropdown [zDropdownMenu]="menu" zType="outline" class="group
+    flex flex-col justify-center items-center hover:scale-105">
     <div class="pt-[7px]">
         <svg class="w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition"
             fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -11,8 +11,8 @@
 </a>
 
 
-<z-dropdown-menu-content #menu="zDropdownMenuContent" class="dropdown-box">
-    <z-dropdown-menu-label>My Account</z-dropdown-menu-label>
+<z-dropdown-menu-content #menu="zDropdownMenuContent" class="dropdown-box absolute right-20 text-gray-700 dark:bg-white  min-w-48">
+    <!-- <z-dropdown-menu-label class="text-[18px]">My Account</z-dropdown-menu-label> -->
     
     @if(isLoggedIn) {
         <z-dropdown-menu-item routerLink="/profile">
