@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { ZardDropdownModule } from "../dropdown/dropdown.module";
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 
 @Component({
     selector: "app-dropdown",
@@ -10,10 +10,17 @@ import { RouterLink } from "@angular/router";
 })
 
 export class Dropdown {
+    isLoggedIn: boolean = false;
 
-    isLoggedIn:boolean = false;
+    constructor(private router: Router) {
+        if (localStorage.getItem('token')) {
+            this.isLoggedIn = true;
+        }
+    }
 
     onLogout() {
-        console.log('Logout clicked');
+        localStorage.removeItem('token');
+        this.isLoggedIn = false;
+        this.router.navigate(['/login']);
     }
 }
