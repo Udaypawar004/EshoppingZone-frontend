@@ -7,6 +7,7 @@ import { PageNotFound } from './pages/page-not-found/page-not-found';
 import { Orders } from './pages/orders/orders';
 import { LoginComponent } from './components/login/login';
 import { SignupComponent } from './components/signup/signup';
+import { ErrorComponent } from './components/error-component/error-component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'profile', component: Profile },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
+    { path: 'error', component: ErrorComponent },
     { path: '**', component: PageNotFound }
 ];
